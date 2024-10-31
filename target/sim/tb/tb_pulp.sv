@@ -796,6 +796,7 @@ module tb_pulp;
       debug_mode_if.set_sbreadonaddr(1'b1, s_tck, s_tms, s_trstn, s_tdi, s_tdo);
 
       // wait for end of computation signal
+      test();
       $display("[TB  ] %t - Waiting for end of computation", $realtime);
 
       jtag_data[0] = 0;
@@ -875,5 +876,8 @@ module tb_pulp;
     @(posedge i_dut.i_soc_domain.i_pulp_soc.i_soc_interconnect_wrap.clk_i);
   endtask
 
+  task test();
+    $display("It enters tests");
+  endtask
 
 endmodule  // tb_pulp

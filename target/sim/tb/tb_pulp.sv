@@ -880,9 +880,9 @@ module tb_pulp;
     $display("It enters tests");
     
     // write data
-    force i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.i_custom_axi_ip.din.q = 16'h1234;
-    force i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.i_custom_axi_ip.enable.q = 1'b1;
-    $display("DIN: %x", i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.i_custom_axi_ip.din.q);
+    force i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.reg_file_to_ip.din.q = 16'h1234;
+    force i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.reg_file_to_ip.enable.q = 1'b1;
+    $display("DIN: %x", i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.reg_file_to_ip.din.q);
 
   endtask
 

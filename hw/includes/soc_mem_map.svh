@@ -72,8 +72,8 @@
 `define SOC_MEM_MAP_CHIP_CTRL_END_ADDR                 32'h1A14_0000
 
 // Custom axi ip
-`define SOC_MEM_MAP_CUSTOM_IP_START_ADDR                 32'h1A14_0000
-`define SOC_MEM_MAP_CUSTOM_IP_END_ADDR                 32'h1A14_1000
+`define SOC_MEM_MAP_CUSTOM_IP_START_ADDR                 32'h1A40_0000
+`define SOC_MEM_MAP_CUSTOM_IP_END_ADDR                 32'h1A40_1000
 
 // Chip Control Address Region (This region is implementation specific)
 `define SOC_MEM_MAP_CHIP_CTRL_FLL_START_ADDR           32'h1A12_0000

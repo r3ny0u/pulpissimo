@@ -1,5 +1,5 @@
 #!/bin/bash
 
-set TB "tb_pulp"
+set TB "vopt_tb"
 
 source ./tcl_files/config/vsim.tcl

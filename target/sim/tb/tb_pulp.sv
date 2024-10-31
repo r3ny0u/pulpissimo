@@ -878,6 +878,7 @@ module tb_pulp;
 
   task test();
     $display("It enters tests");
+    $display("DIN: %x", i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.i_custom_axi_ip.din.d);
   endtask
 
 endmodule  // tb_pulp

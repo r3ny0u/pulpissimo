@@ -884,12 +884,10 @@ module tb_pulp;
     force i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.reg_file_to_ip.enable.q = 1'b1;
     $display("DIN: %x", i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.reg_file_to_ip.din.q);
 
-    // static logic [1:0] cai_state;
-    // do begin
-    //   cai_state = i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.ip_to_reg_file.state.d;
-    // end while (custom_axi_ip_state != 2'b10);
-    #50us;
-    $display("DOUT: %x", i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.ip_to_reg_file.dout.d);
+    wait (~i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.ip_to_reg_file.status.d == 2'b01);
+
+    release i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.reg_file_to_ip.din.q;
+    release i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.reg_file_to_ip.enable.q;
 
   endtask
 

@@ -887,7 +887,7 @@ module tb_pulp;
     logic [1:0] custom_axi_ip_state;
     do begin
       custom_axi_ip_state = i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.ip_to_reg_file.state.d;
-    while (custom_axi_ip_state != 2'b10);
+    end while (custom_axi_ip_state != 2'b10);
     $displace("DOUT: %x", i_dut.i_soc_domain.i_pulp_soc.custom_axi_ip_top_i.ip_to_reg_file.dout.d);
 
   endtask
